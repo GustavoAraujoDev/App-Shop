@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/components/app_drawer.dart';
-import 'package:shop/components/badge.dart';
 import 'package:shop/components/product_grid.dart';
 import 'package:shop/models/cart.dart';
 import 'package:shop/models/product_list.dart';
@@ -72,7 +71,7 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
               icon: const Icon(Icons.shopping_cart),
             ),
             builder: (ctx, cart, child) => Badge(
-              value: cart.itemsCount.toString(),
+              label: Text(cart.itemsCount.toString()),
               child: child!,
             ),
           ),
